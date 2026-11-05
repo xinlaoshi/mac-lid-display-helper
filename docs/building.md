@@ -9,7 +9,7 @@ bash scripts/test.sh
 bash scripts/build.sh
 ```
 
-构建产物位于 `output/Mac合盖和显示器联动助手.app`。构建脚本创建本地签名，不能替代公开分发所需的Developer ID签名和Apple公证。
+构建产物位于 `output/Mac合盖和显示器联动助手.app`。构建脚本创建带Hardened Runtime的本地签名，不能替代公开分发所需的Developer ID签名和Apple公证。发布流程见[签名与公证](notarization.md)。
 
 测试使用模型和模拟显示后端，不改变真实屏幕，也不需要外接显示器。
 
