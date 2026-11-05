@@ -2,7 +2,7 @@
 
 <img src="assets/AppIcon.png" width="112" alt="App 图标">
 
-**免费开源 · MIT · 测试版 v2.2.5-beta.1 · Apple 芯片 Mac · macOS 14+**
+**免费开源 · MIT · 测试版 v2.2.6-beta.1 · Apple 芯片 Mac · macOS 14+**
 
 开盖用 Mac，合盖用外接屏。一个根据 MacBook 开合盖状态，自动切换显示器的 macOS 菜单栏工具。
 
@@ -17,13 +17,13 @@
 - 为不同屏幕保存分辨率、刷新率与 HDR 偏好。
 - 可设置开盖切换延时和登录后启动。
 - 提供“恢复所有显示器并暂停”，方便返回正常显示状态。
-- 菜单栏“关于…”集中展示版本、公众号、官网与自愿赞赏入口，二维码支持点击放大。
+- 菜单栏“关于…”采用作者主页布局，分为软件信息、公众号和赞赏支持，二维码支持点击放大。
 
 ## 下载与安装
 
-[下载测试版 DMG](https://github.com/xinlaoshi/mac-lid-display-helper/releases/download/v2.2.5-beta.1/MacLidDisplayHelper-2.2.5-AppleSilicon.dmg) · [全部版本与 ZIP](https://github.com/xinlaoshi/mac-lid-display-helper/releases) · [使用说明](docs/installation.md)
+[下载测试版 DMG](https://github.com/xinlaoshi/mac-lid-display-helper/releases/download/v2.2.6-beta.1/MacLidDisplayHelper-2.2.6-AppleSilicon.dmg) · [全部版本与 ZIP](https://github.com/xinlaoshi/mac-lid-display-helper/releases) · [使用说明](docs/installation.md)
 
-App 内版本为 2.2.5 (12)。请下载上面的 App 安装包；GitHub 自动生成的 Source code 压缩包用于查看和编译源码。
+App 内版本为 2.2.6 (13)。请下载上面的 App 安装包；GitHub 自动生成的 Source code 压缩包用于查看和编译源码。
 
 1. 打开 DMG，将 App 拖入 Applications（应用程序）。
 2. 从“应用程序”打开 App，点击菜单栏图标 →“设置…”。
@@ -31,6 +31,12 @@ App 内版本为 2.2.5 (12)。请下载上面的 App 安装包；GitHub 自动�
 4. 设置开盖与合盖动作，点击“保存”。需要自动运行时，开启“登录后启动”并保存。
 
 当前测试分发包仅有本地签名，尚未经过 Apple Developer ID 签名及公证，首次打开可能被系统阻止。确认来源可信后，请参阅 [Apple 官方打开说明](https://support.apple.com/zh-cn/102445)。
+
+## 关于界面
+
+采用作者主页布局，软件信息、公众号与赞赏支持分开查看。
+
+<img src="docs/images/about-window.jpg" width="696" alt="作者主页式关于窗口，显示2.2.6版本及MIT免费开源许可">
 
 ## 系统与硬件要求
 
