@@ -1,0 +1,26 @@
+# Build outputs and machine-local evidence
+output/
+downloads/
+evidence/
+design-demos/
+distribution/
+.DS_Store
+.swiftpm/
+.build/
+DerivedData/
+.env
+.env.*
+*.p12
+*.p8
+*.key
+*.mobileprovision
+*.provisionprofile
+
+# Local design history and hardware-only diagnostics
+PRODUCT.md
+DESIGN.md
+IMPLEMENTATION_V2.md
+Tests/HardwareHDR.swift
+scripts/render-system-icon.swift
+assets/app-icon-selection.json
+assets/icons/
