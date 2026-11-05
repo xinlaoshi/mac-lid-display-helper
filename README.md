@@ -2,7 +2,7 @@
 
 <img src="assets/AppIcon.png" width="112" alt="App 图标">
 
-**免费开源 · MIT · 测试版 v2.2.4-beta.1 · Apple 芯片 Mac · macOS 14+**
+**免费开源 · MIT · 测试版 v2.2.5-beta.1 · Apple 芯片 Mac · macOS 14+**
 
 开盖用 Mac，合盖用外接屏。一个根据 MacBook 开合盖状态，自动切换显示器的 macOS 菜单栏工具。
 
@@ -17,12 +17,13 @@
 - 为不同屏幕保存分辨率、刷新率与 HDR 偏好。
 - 可设置开盖切换延时和登录后启动。
 - 提供“恢复所有显示器并暂停”，方便返回正常显示状态。
+- 菜单栏“关于…”集中展示版本、公众号、官网与自愿赞赏入口，二维码支持点击放大。
 
 ## 下载与安装
 
-[下载测试版 DMG](https://github.com/xinlaoshi/mac-lid-display-helper/releases/download/v2.2.4-beta.1/MacLidDisplayHelper-2.2.4-AppleSilicon.dmg) · [全部版本与 ZIP](https://github.com/xinlaoshi/mac-lid-display-helper/releases) · [使用说明](docs/installation.md)
+[下载测试版 DMG](https://github.com/xinlaoshi/mac-lid-display-helper/releases/download/v2.2.5-beta.1/MacLidDisplayHelper-2.2.5-AppleSilicon.dmg) · [全部版本与 ZIP](https://github.com/xinlaoshi/mac-lid-display-helper/releases) · [使用说明](docs/installation.md)
 
-App 内版本为 2.2.4 (11)。请下载上面的 App 安装包；GitHub 自动生成的 Source code 压缩包用于查看和编译源码。
+App 内版本为 2.2.5 (12)。请下载上面的 App 安装包；GitHub 自动生成的 Source code 压缩包用于查看和编译源码。
 
 1. 打开 DMG，将 App 拖入 Applications（应用程序）。
 2. 从“应用程序”打开 App，点击菜单栏图标 →“设置…”。
@@ -71,11 +72,23 @@ App 内版本为 2.2.4 (11)。请下载上面的 App 安装包；GitHub 自动�
 
 ## 支持开发
 
-这个工具免费使用。如果它让你的桌面切换更省心，欢迎自愿请我喝杯咖啡，支持后续适配和维护。
+这个工具免费使用，采用 MIT 协议开源。如果它让你的桌面切换更省心，欢迎自愿请我喝杯咖啡，支持后续适配和维护。
 
 打赏完全自愿，不影响功能使用，也不作为功能交付或修复时限的承诺。
 
-打赏入口稍后补充。目前也欢迎通过 [Issues](https://github.com/xinlaoshi/mac-lid-display-helper/issues) 反馈问题或分享兼容设备。
+<a href="assets/support/wechat-appreciation.png"><img src="assets/support/wechat-appreciation.png" width="320" alt="殇小辛 的赞赏码"></a>
+
+## 关注殇小辛的公众号
+
+Apple TV & Vision Pro 第一答主，全网20万+粉丝
+
+教程帮助了超 1000 万人
+
+扫码关注获取 Vision Pro 和 Apple TV 教程合集
+
+<a href="assets/support/wechat-official-account.jpg"><img src="assets/support/wechat-official-account.jpg" width="240" alt="殇小辛公众号二维码"></a>
+
+更多内容：[小破猫官网](https://xiaopomao.com)。赞赏与关注入口也可从 App 菜单栏“关于…”打开。
 
 ## 源码与许可
 

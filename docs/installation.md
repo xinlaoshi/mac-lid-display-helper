@@ -2,7 +2,7 @@
 
 ## 安装
 
-1. 在 [Releases](https://github.com/xinlaoshi/mac-lid-display-helper/releases) 下载 `MacLidDisplayHelper-2.2.4-AppleSilicon.dmg`，或选择 ZIP。
+1. 在 [Releases](https://github.com/xinlaoshi/mac-lid-display-helper/releases) 下载 `MacLidDisplayHelper-2.2.5-AppleSilicon.dmg`，或选择 ZIP。
 2. 打开 DMG，将“Mac合盖和显示器联动助手.app”拖入 Applications（应用程序）；使用 ZIP 时，解压后将 App 放入“应用程序”。
 3. 从“应用程序”打开 App。它显示在顶部菜单栏，不常驻 Dock。
 4. 点击菜单栏“开盖 Mac＋显示器”图标，选择“设置…”。
@@ -35,3 +35,9 @@
 升级前保存需要保留的设置，再选择“退出并恢复显示器”，然后用新版替换“应用程序”中的旧 App。当前没有内置自动更新服务。
 
 卸载前关闭“登录后启动”并保存，选择“退出并恢复显示器”，再将 App 移到废纸篓。保留的本地设置与日志位置见[隐私说明](privacy.md)。
+
+## 关于与联系
+
+菜单栏选择“关于…”，或在“使用帮助”中点击“关于…”，可查看版本、公众号二维码、小破猫官网、GitHub与MIT协议。点击二维码可放大查看。赞赏完全自愿，不影响功能使用。
+
+![关于窗口](images/about-window.jpg)

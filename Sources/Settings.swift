@@ -138,8 +138,10 @@ struct SettingsRoot: View {
             helpBlock("添加与输出", "在“设备与输出”中加入新显示器，并设置输出模式与 HDR。可用模式取决于屏幕和连接设备。停用输出不等于关闭显示器电源。")
             helpBlock("恢复画面", "目标屏幕未响应时会保留可用画面。也可恢复所有显示器并暂停自动切换。")
             Button("恢复所有显示器并暂停自动切换") { model.owner?.restoreDisplays() }.controlSize(.large)
-            Text("版本 \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "")")
-                .font(.system(size: 12)).foregroundStyle(secondaryInk)
+            HStack(spacing: 14) {
+                Text("版本 \(AppInformation.versionLabel)").font(.system(size: 12)).foregroundStyle(secondaryInk)
+                Button("关于…") { model.owner?.showAbout() }
+            }
         }
     }
     private func helpBlock(_ title: String, _ text: String) -> some View {

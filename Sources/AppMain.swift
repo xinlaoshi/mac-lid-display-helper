@@ -83,6 +83,7 @@ final class LidObserver {
     var settingsWindow: NSWindow?
     var settingsModel: SettingsModel?
     var diagnosticWindow: NSWindow?
+    var aboutWindow: NSWindow?
     let loginURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Library/LaunchAgents/com.xiaopomao.LGLidSwitch.plist")
     var loginEnabled: Bool { FileManager.default.fileExists(atPath: loginURL.path) }
 
@@ -105,7 +106,7 @@ final class LidObserver {
         NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(willSleep), name: NSWorkspace.willSleepNotification, object: nil)
         NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(didWake), name: NSWorkspace.didWakeNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(screensChanged), name: NSApplication.didChangeScreenParametersNotification, object: nil)
-        store.log("启动 2.2.4 (11)；自动切换=\(store.configuration.automatic)")
+        store.log("启动 \(AppInformation.versionLabel)；自动切换=\(store.configuration.automatic)")
         if let error = store.loadError { setStatus(error) }
         else {
             // Let AppKit finish registering the process with WindowServer before reading active displays.
@@ -237,7 +238,8 @@ final class LidObserver {
         menu.addItem(.separator()); add("恢复所有显示器并暂停", #selector(restoreDisplays))
         add("重新检测显示器", #selector(rediscover), enabled: !busy)
         add("登录后启动", #selector(toggleLogin), checked: loginEnabled); add("连接状态…", #selector(showDiagnostics))
-        menu.addItem(.separator()); add("退出并恢复显示器", #selector(quit))
+        menu.addItem(.separator()); add("关于…", #selector(showAbout))
+        add("退出并恢复显示器", #selector(quit))
     }
     @objc func toggleAutomatic() {
         store.configuration.automatic.toggle()
@@ -263,7 +265,7 @@ final class LidObserver {
     @objc func showDiagnostics() {
         let encoder = JSONEncoder(); encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         let data = (try? encoder.encode(hardware.records())) ?? Data()
-        let text = "Mac合盖和显示器联动助手 2.0.1 (4)\n\(status)\n\n开盖：\(hardware.lidClosed() == false)\n自动切换：\(store.configuration.automatic)\n登录启动：\(loginEnabled)\n\n\(String(data: data, encoding: .utf8) ?? "")\n\n日志：\(store.logURL.path)"
+        let text = "Mac合盖和显示器联动助手 \(AppInformation.versionLabel)\n\(status)\n\n开盖：\(hardware.lidClosed() == false)\n自动切换：\(store.configuration.automatic)\n登录启动：\(loginEnabled)\n\n\(String(data: data, encoding: .utf8) ?? "")\n\n日志：\(store.logURL.path)"
         let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 680, height: 520), styleMask: [.titled, .closable, .resizable], backing: .buffered, defer: false)
         window.title = "显示器连接状态"; window.isReleasedWhenClosed = false
         let scroll = NSScrollView(frame: window.contentView!.bounds); scroll.autoresizingMask = [.width, .height]; scroll.hasVerticalScroller = true
