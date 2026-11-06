@@ -92,6 +92,10 @@ final class LidObserver {
         if let url = Bundle.main.url(forResource: "AppIcon", withExtension: "icns"), let icon = NSImage(contentsOf: url) {
             NSApp.applicationIconImage = icon
         }
+        if let executable = Bundle.main.executableURL?.path {
+            do { try refreshLoginAgentExecutable(at: loginURL, executable: executable) }
+            catch { store.log("登录启动项路径更新失败：\(error.localizedDescription)") }
+        }
         item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         let image: NSImage? = makeLinkSymbol()
         image?.isTemplate = true; item.button?.image = image
@@ -280,12 +284,6 @@ final class LidObserver {
         terminating = true; request(nil, restore: true, quitting: true); return .terminateLater
     }
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool { showSettings(); return true }
-}
-
-func writeLoginAgent(to url: URL, executable: String) throws {
-    try FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
-    let plist: [String: Any] = ["Label": "com.xiaopomao.LGLidSwitch", "ProgramArguments": [executable], "RunAtLoad": true, "ProcessType": "Interactive", "LimitLoadToSessionType": "Aqua"]
-    try PropertyListSerialization.data(fromPropertyList: plist, format: .xml, options: 0).write(to: url, options: .atomic)
 }
 
 @main struct EntryPoint {

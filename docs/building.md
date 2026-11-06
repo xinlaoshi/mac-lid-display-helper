@@ -22,3 +22,9 @@ bash scripts/install.sh
 脚本安装至 `/Applications`，停止同一路径旧实例、写入当前用户登录启动项并启动新版。运行App后会按已保存规则控制显示输出；请先保存旧实例里需要的未保存设置。本脚本依赖Python 3，面向开发者。普通用户直接下载Release中的DMG。
 
 Swift模块缓存保存在用户Library/Caches目录，不进入仓库。源码不依赖BetterDisplay、displayplacer可执行文件或第三方Swift软件包。
+
+## 内部名称与升级兼容
+
+2.2.7起，内部产品、归档Scheme和可执行文件名称统一为`MacDisplaySwitch`。对外中文名称仍为“Mac合盖和显示器联动助手”。
+
+为兼容已安装版本，Bundle ID、登录启动项Label及现有设置/日志目录保留历史标识`LGLidSwitch`。首次手动打开升级后的App时，只更新同一App已有登录启动项的旧可执行路径，不额外开启登录启动。开发安装脚本会替换整个App包，避免旧可执行文件残留破坏签名。

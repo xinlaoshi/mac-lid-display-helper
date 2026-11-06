@@ -17,10 +17,12 @@ def main():
 
     root = Path(__file__).resolve().parents[1]
     source = root / "output/Mac合盖和显示器联动助手.app"
-    if not (source / "Contents/MacOS/LGLidSwitch").is_file():
+    if not (source / "Contents/Info.plist").is_file():
         parser.error("build the app with bash scripts/build.sh first")
     info = plistlib.loads((source / "Contents/Info.plist").read_bytes())
-    name = f"MacLidDisplayHelper-{info['CFBundleShortVersionString']}-{info['CFBundleVersion']}"
+    if info.get("CFBundleExecutable") != "MacDisplaySwitch" or not (source / "Contents/MacOS/MacDisplaySwitch").is_file():
+        parser.error("rebuild the app with its MacDisplaySwitch executable first")
+    name = f"MacDisplaySwitch-{info['CFBundleShortVersionString']}-{info['CFBundleVersion']}"
     directory = root / "output/notarization"
     archive = directory / f"{name}.xcarchive"
     if archive.exists():
@@ -34,7 +36,7 @@ def main():
         "ArchiveVersion": 2,
         "CreationDate": datetime.datetime.now(datetime.timezone.utc),
         "Name": "Mac合盖和显示器联动助手",
-        "SchemeName": "LGLidSwitch",
+        "SchemeName": "MacDisplaySwitch",
         "ApplicationProperties": {
             "ApplicationPath": "Applications/" + source.name,
             "CFBundleIdentifier": info["CFBundleIdentifier"],
