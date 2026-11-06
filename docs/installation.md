@@ -2,7 +2,7 @@
 
 ## 安装
 
-1. 在 [Releases](https://github.com/xinlaoshi/mac-lid-display-helper/releases) 下载 `MacLidDisplayHelper-2.2.6-AppleSilicon.dmg`，或选择 ZIP。
+1. 在 [Releases](https://github.com/xinlaoshi/mac-lid-display-helper/releases) 下载 `MacDisplaySwitch-2.2.7-AppleSilicon.dmg`，或选择 ZIP。
 2. 打开 DMG，将“Mac合盖和显示器联动助手.app”拖入 Applications（应用程序）；使用 ZIP 时，解压后将 App 放入“应用程序”。
 3. 从“应用程序”打开 App。它显示在顶部菜单栏，不常驻 Dock。
 4. 点击菜单栏“开盖 Mac＋显示器”图标，选择“设置…”。
@@ -11,7 +11,9 @@
 
 ## 首次打开的系统提示
 
-此测试包只有本地签名，尚未经过 Developer ID 签名或 Apple 公证。确认来源可信后，可在尝试打开后进入“系统设置 → 隐私与安全性”，查看该应用对应的“仍要打开”。受管理设备可能不提供此选项。详见 [Apple 官方说明](https://support.apple.com/zh-cn/102445)。
+v2.2.7-beta.1 安装包内的 App 已使用 Developer ID 签名，通过 Apple 公证并附带票据。系统验证签名时，开发者名称显示为 `jinzhi zhu`；软件作者为殇小辛。
+
+首次打开仍可能出现“从互联网下载，是否打开”的正常确认；确认从本仓库下载后点击“打开”即可，通常无需到“隐私与安全性”手动放行。受管理 Mac 仍可能受组织策略限制。旧测试版的签名状态见对应版本说明。
 
 ## 设置显示联动
 
@@ -32,7 +34,7 @@
 
 显示异常时，先打开 Mac 上盖，再选择菜单栏“恢复所有显示器并暂停”。
 
-升级前保存需要保留的设置，再选择“退出并恢复显示器”，然后用新版替换“应用程序”中的旧 App。当前没有内置自动更新服务。
+升级前保存需要保留的设置，再选择“退出并恢复显示器”，然后用新版替换“应用程序”中的旧 App。升级后请从“应用程序”手动打开新版一次；已有登录启动项会更新为新的 `MacDisplaySwitch` 可执行路径，原有屏幕规则继续保留。当前没有内置自动更新服务。
 
 卸载前关闭“登录后启动”并保存，选择“退出并恢复显示器”，再将 App 移到废纸篓。保留的本地设置与日志位置见[隐私说明](privacy.md)。
 

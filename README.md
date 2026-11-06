@@ -2,7 +2,7 @@
 
 <img src="assets/AppIcon.png" width="112" alt="App 图标">
 
-**免费开源 · MIT · 测试版 v2.2.6-beta.1 · Apple 芯片 Mac · macOS 14+**
+**免费开源 · MIT · 测试版 v2.2.7-beta.1 · Apple 芯片 Mac · macOS 14+**
 
 开盖用 Mac，合盖用外接屏。一个根据 MacBook 开合盖状态，自动切换显示器的 macOS 菜单栏工具。
 
@@ -21,16 +21,16 @@
 
 ## 下载与安装
 
-[下载测试版 DMG](https://github.com/xinlaoshi/mac-lid-display-helper/releases/download/v2.2.6-beta.1/MacLidDisplayHelper-2.2.6-AppleSilicon.dmg) · [全部版本与 ZIP](https://github.com/xinlaoshi/mac-lid-display-helper/releases) · [使用说明](docs/installation.md)
+[下载测试版 DMG](https://github.com/xinlaoshi/mac-lid-display-helper/releases/download/v2.2.7-beta.1/MacDisplaySwitch-2.2.7-AppleSilicon.dmg) · [全部版本与 ZIP](https://github.com/xinlaoshi/mac-lid-display-helper/releases) · [使用说明](docs/installation.md)
 
-App 内版本为 2.2.6 (13)。请下载上面的 App 安装包；GitHub 自动生成的 Source code 压缩包用于查看和编译源码。
+App 内版本为 2.2.7 (14)，内部名称为 MacDisplaySwitch。请下载上面的 App 安装包；GitHub 自动生成的 Source code 压缩包用于查看和编译源码。
 
 1. 打开 DMG，将 App 拖入 Applications（应用程序）。
 2. 从“应用程序”打开 App，点击菜单栏图标 →“设置…”。
 3. 连接显示器，在“设备与输出”中将目标屏幕加入联动。
 4. 设置开盖与合盖动作，点击“保存”。需要自动运行时，开启“登录后启动”并保存。
 
-当前测试分发包仅有本地签名，尚未经过 Apple Developer ID 签名及公证，首次打开可能被系统阻止。确认来源可信后，请参阅 [Apple 官方打开说明](https://support.apple.com/zh-cn/102445)。
+当前安装包内的 App 已完成 Developer ID 签名和 Apple 公证，并附带公证票据。首次打开仍可能出现正常的互联网下载确认；确认来源后点击“打开”即可，通常无需到系统设置手动放行。升级后请从“应用程序”手动打开新版一次，以更新已有登录启动项的执行路径。
 
 ## 关于界面
 
